@@ -1,6 +1,5 @@
-import express from 'express'
+import { env, app } from './config';
 
-const app = express()
-app.listen(5000, () => {
-    console.log('Server running')
+app.listen(env.port, () => {
+    console.log('Server running: ', env.port)
 })

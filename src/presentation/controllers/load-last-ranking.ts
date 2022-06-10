@@ -2,7 +2,7 @@ import { HttpResponse, Controller, ServerError, success } from './../contracts';
 import { RankingScoreViewModel } from './../view-models';
 import { LastRankingLoader } from './../../domain/usecases/last-raking-loader';
 
-export class LoadLastrRanking implements Controller {
+export class LoadLastRankingController implements Controller {
     constructor(private readonly lastRankingLoader: LastRankingLoader) { }
 
     async handler(): Promise<HttpResponse<RankingScoreViewModel[]>> {
